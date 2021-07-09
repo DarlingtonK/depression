@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>depression_Detection</title>
+    </head>
+    
+<!-- Adding styles like colour, height, width, border to our html page -->
+<style>
+
+
+input[type=text], select {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-weight: bolder;
+}
+
+input[type=submit] {
+  width: 80%;
+  background-color: goldenrod;
+  color:black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size:100;
+  font-weight: bolder;
+}
+
+
+input[type=submit]:hover {
+  background-color: orangered;
+}
+form{
+    border-radius: 10px;
+    padding-top: 5%;
+    font-weight: bolder;
+}
+div {
+ 
+  border-radius: 5px;
+  margin-left: 35%;
+  width: 30%;
+  
+}
+h1{
+    color: goldenrod;
+    font-size: 40px;
+    font-weight: bolder;
+}
+h3{
+  color: white;
+}
+
+body {
+            
+            background-image: url("static/img/car.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-align: center;
+            padding: 0px;
+        }
+       
+</style>
+
+<body>
+
+<h1>Depression Detection</h1>
+
+<div>
+ <!-- Html form which will get all the values from user -->
+ <form action="{{ url_for('predict')}}" method="post" style="background-color:#E6E6FA">
+
+<label for="words1">Twitter statement</label><br>
+<input type="text" id="words1" name="words1" placeholder="Enter first statement" required="required"><br>
+<label for="words">twitter second statement</label><br>
+<input type="text" id="words" name="words" placeholder="Enter second statement" required="required"><br>
+
+
+     
+<!-- submit button -->           
+<input type="submit" value="Detect depression">
+</form>
+</div>
+    
+<!-- the predicted text -->
+<h3>{{ prediction_text }}</h3>
+
+</body>
+</html>
