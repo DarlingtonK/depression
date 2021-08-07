@@ -128,11 +128,11 @@ def main():
   model = pickle.load(pickle_out)
   pickle_out.close()
 
-  st.title("\tSocial Media Depression Detection")
+  st.title("\tTwitter Depression Detection")
   st.write(" ")
   st.write(" ")
   st.sidebar.image('sentiments.jpg')
-  st.sidebar.header("Project Paatners")
+  st.sidebar.header("Project developers")
   st.sidebar.text('1.Darlington Kwenda, R195903B')
   st.sidebar.text('2.Melissa Chikanyire, R197988X')
     
@@ -155,7 +155,7 @@ def main():
         st.success('Get tips for fighting depression from the following site')
         st.write(random.choice(urls))
         
-  if (st.checkbox('Predict Live Tweets')):
+  if (st.checkbox('Predict Using Live Tweets')):
     handle = st.text_input('Twitter Username')
     count = st.number_input('Tweet Count')
     if (st.button('Predict')):
