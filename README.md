@@ -1,4 +1,4 @@
-# TwitterSentiments
+# Twitter Sentiments
 Detecting depression in tweets.
 
 See the app in action
